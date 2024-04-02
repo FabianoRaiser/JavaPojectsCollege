@@ -1,0 +1,32 @@
+import javax.swing.JOptionPane;
+
+public class PedeCentimetros {
+
+	public static double ConverteMili( double entrada) {
+		double mm = entrada / 10;
+		
+		return mm;
+	}
+	
+	public static double ConverteMetro( double entrada) {
+		double m = entrada * 100;
+		
+		return m;
+	}
+	
+	public static void main(String[] args) {
+		/* Faça um programa que peça um número em centímetros 
+		e converta para metros e milímetros. 
+		Mostre para o usuário os resultados. */
+		
+		double centimetros = Double.parseDouble(JOptionPane.showInputDialog("Qual a medida em Centímetros?" ));
+		
+		JOptionPane.showMessageDialog(null, "As conversões são: \n" + 
+				"Em metros: " + ConverteMetro(centimetros) + "\n" +
+				"Em milimetros: " + ConverteMili(centimetros));
+		
+		
+
+	}
+
+}
