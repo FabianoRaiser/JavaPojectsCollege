@@ -50,6 +50,8 @@ String arquivo = "src/velas.csv";
 			// System.out.println("EXISTEM " + nr_verdes + " VELAS VERDES"); 
 			
 			
+			leitor.close();
+			
 		}
 		catch(Exception erro)
 		{

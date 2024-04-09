@@ -45,7 +45,7 @@ public class LeituraArquivo {
 		int maiorQuem = 0;
 		
 		for(int j = 0; j < x; j++) {
-			if(maior > salario[j]) {
+			if(maior < salario[j]) {
 				maior = salario[j];
 				maiorQuem = j;
 			}
@@ -53,11 +53,11 @@ public class LeituraArquivo {
 		
 		System.out.println("Quem tem o maior salário é " + nome[maiorQuem] + " com " + maior);
 		
-		double menor = 0;
+		double menor = 99999999;
 		int menorQuem = 0;
 		
 		for(int j = 0; j < x; j++) {
-			if(menor < salario[j]) {
+			if(menor > salario[j]) {
 				menor = salario[j];
 				menorQuem = j;
 			}
