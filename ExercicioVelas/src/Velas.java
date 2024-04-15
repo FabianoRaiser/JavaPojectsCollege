@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-public class Criptos {
+public class Velas {
 
 	public static void main(String[] args) {
 		String arquivo = "src/velas.csv";
@@ -57,9 +57,6 @@ public class Criptos {
 			int nrVermelhaBaiAlt = 0;
 			int nrVerdeAltBai = 0;
 			int nrVermelhaAltBai = 0;
-			double[] medias = new double[168];
-			int v3 = 0;
-			int positMedias = 0;
 			
 			for(int p = 1; p<499;p++) {
 				// System.out.println(p);
@@ -87,27 +84,16 @@ public class Criptos {
 						nrVermelhaAltBai++;
 					}
 				}
-				
-				// Exercício 8: qual a amplitude "máximo-mínimo" média a cada 3 velas?
-				
-				
-				v3++;
-				
-				if(v3 == 3) {
-					v3 = 0;
-					
-					double mediaMax = (maximo[p-1] + maximo[p] + maximo[p+1])/ 3;
-					double mediaMin = (minimo[p-1] + minimo[p] + minimo[p+1])/ 3;
-					
-					medias[positMedias] = mediaMax - mediaMin;
-					positMedias++;
-				
-				}
-				
-				
-				
 			}
 				
+
+				
+				
+
+
+
+
+				// Exercício 8: qual a amplitude "máximo-mínimo" média a cada 3 velas?
 				// Exercício 9: qual a média de fechamento a cada 3 velas?
 				// Exercício 10: após a média de fechamento de 3 velas, analise a quarta vela e conte quantas
 				              // possuem fechamento maior que a média e quantas possuem fechamento menor que a média.
@@ -129,18 +115,11 @@ public class Criptos {
 			System.out.println("VELAS VERMELHAS APÓS UMA REVERSÃO BAIXA ALTA: " + nrVerdeAltBai);
 			System.out.println("VELAS VERMELHAS APÓS UMA REVERSÃO ALTA BAIXA: " + nrVermelhaAltBai);
 			
-			System.out.print("AS MEDIAS DAS AMPLITUDES MÁXIMO-MINIMO SÃO: ");
-			for(int z = 0; z < medias.length - 2; z++) {
-				System.out.print(medias[z] + ", ");
-			}
-			System.out.println(medias[medias.length - 1] + ".");
-			
 			
 		}
 		catch(Exception erro)
 		{
 			System.out.println("Erro ao tentar ler arquivo");
-			System.out.println(erro);
 		}
 	}
 
