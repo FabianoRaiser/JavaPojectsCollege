@@ -6,7 +6,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/122321673/Downloads/drive-download-20240429T220357Z-001/mysql-connector-j-8.3.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/122321673/Downloads/drive-download-20240429T220357Z-001/rs2xml.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

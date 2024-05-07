@@ -15,14 +15,16 @@ public class Inserir {
 				try
 				{
 					conexao = ClasseConexao.Conectar();
-					String sql = "INSERT into contatos(cpf,nome) VALUES(?,?)";
+					String sql = "INSERT into contatos(cpf,nome) VALUES(?,?,?)";
 					comando = conexao.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
 					
 					String cpf = JOptionPane.showInputDialog("CPF:");
 					String nome = JOptionPane.showInputDialog("NOME:");
+					String idade = JOptionPane.showInputDialog("IDADE:");
 					
 					comando.setString(1, cpf);
 					comando.setString(2, nome);
+					comando.setString(3, idade);
 					
 					if(comando.executeUpdate()>0)
 					{

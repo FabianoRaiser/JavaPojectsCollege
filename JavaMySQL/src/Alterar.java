@@ -24,6 +24,7 @@ public class Alterar {
 					comando.setString(1, nome);
 					comando.setString(2, cpf);
 					
+					
 					if(comando.executeUpdate()>0)
 					{
 						JOptionPane.showMessageDialog(null, "DADOS ALTERADOS");
